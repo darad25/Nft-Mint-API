@@ -9,10 +9,10 @@ const attributes = ['Crown, star', 'Helmet, shoe', 'Vans, sneakers', 'nike, orig
 
 
 //Getting the uploaded file via hash code.
-app.get(`/tokens/:tokenId`, function(req, res) {
+app.get(`/api/tokens/:tokenId`, function(req, res) {
     res.setHeader('Content-Type', 'text/html');
     res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
-    res.send( 
+    res.end( 
         {
             name: tokenNames[req.params.tokenId],
             description: "This lootbox contains some OpenSea Creatures! It can also be traded!",
